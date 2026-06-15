@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beacon — Connect</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="top-inner">
+    <span class="beacon" aria-hidden="true"><span class="ring"></span><span class="core"></span></span>
+    <span class="wordmark">Beacon</span>
+    <span class="tag">Connect</span>
+  </div>
+</header>
+
+<div class="wrap">
+<main class="doc">
+  <a class="back" href="index.html">&larr; Back</a>
+  <h1 style="font-size:32px;margin-bottom:20px;">Connect to QuickBooks Online</h1>
+  <p>Beacon connects to its owner's QuickBooks Online company through Intuit's OAuth 2.0 authorization. The owner starts the flow, signs in to Intuit, and grants the requested scopes; Intuit returns an authorization code that Beacon exchanges for access tokens.</p>
+
+  <h2>Reconnect</h2>
+  <p>If the connection lapses or tokens expire, the same authorization flow re-establishes access. No other party is ever involved.</p>
+
+  <p class="note"><strong>How it runs.</strong> The operator starts the authorization from Beacon. Intuit's sign-in opens, the operator approves the requested scopes, and Beacon stores the returned tokens locally to make subsequent requests. No other party is involved at any step.</p>
+</main>
+
+<footer>
+  <div class="foot-links">
+    <a href="eula.html">Terms&nbsp;of&nbsp;Use</a>
+    <a href="privacy.html">Privacy&nbsp;Policy</a>
+    <a href="connect.html">Connect</a>
+    <a href="disconnect.html">Disconnect</a>
+    <a href="mailto:idealimagellc@gmail.com">Contact</a>
+  </div>
+  <p class="foot-meta">Beacon · private instance · operated by Aaron Jones</p>
+</footer>
+</div>
+
+</body>
+</html>
