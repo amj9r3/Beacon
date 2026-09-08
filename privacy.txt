@@ -1,0 +1,92 @@
+Beacon / Trust communications
+Privacy Policy
+How Beacon handles conversations, mobile information, consent, and authorized administrative data.
+Last updated:
+September 8, 2026
+Messaging privacy at a glance
+Purpose:
+Private, non-promotional trust coordination and requested updates.
+Mobile data:
+No sale or sharing for third-party or affiliate marketing. No transfer of your messaging consent.
+Frequency:
+Varies with your requests and selected updates. Message and data rates may apply.
+Your controls:
+Reply STOP to unsubscribe; reply HELP for help, or contact
+idealimagellc@gmail.com
+.
+1. Operator and scope
+Beacon is a private, AI-assisted administrative and messaging service operated by
+[LEGAL OPERATOR NAME]
+("we," "us," or "our") for trust-related coordination. Our administrative contact is Aaron Jones.
+This Privacy Policy applies to people who visit Beacon's public information pages, communicate with Beacon or its operator, or enroll in the Beacon SMS/MMS program. It also describes operator-authorized integrations. Public access to these pages does not grant access to private trust records or administrative systems.
+The messaging program supports administrative questions, scheduling, appointment confirmations, requested reminders, document-coordination notices, and updates about requests you have made. It is not an advertising, fundraising, or investment-solicitation program.
+2. Information we handle
+Contact and relationship information
+Your mobile number, name, email address, communication preferences, and information you choose to provide about your relationship to the trust or the operator.
+Conversations and requests
+Messages you send and receive, information or attachments you provide, administrative requests, and AI-generated or human-written replies. Please limit submissions to information needed for your request.
+Messaging and consent records
+The number enrolled; the consent wording shown and your affirmative response; when and how consent was obtained; opt-out or re-enrollment history; message identifiers; timestamps; delivery status; and records needed to administer your messaging preferences.
+Technical information
+Our hosting and communications providers may process IP addresses, browser or device information, request logs, diagnostic information, and security events when you access the service.
+Authorized integration data
+When an authorized operator connects an accounting service such as QuickBooks Online, Beacon may access accounts, transactions, balances, and related records permitted by that connection. A messaging recipient is not automatically connected to an accounting service and does not receive access to another person's or the trust's records.
+3. How we use information
+We use information to respond to your requests, coordinate authorized trust administration, deliver the messages you requested, maintain conversation context, provide support, verify permissions, protect the service, troubleshoot delivery, and honor your communication preferences.
+Consent and delivery records help us document enrollment, investigate complaints, prevent unwanted messages, and meet applicable recordkeeping duties. We do not use this program to build advertising audiences or sell leads.
+4. Mobile information and consent
+Your mobile information is not a marketing asset.
+We do not sell, rent, or share mobile phone numbers, other mobile information, or messaging opt-in and consent data with third parties or affiliates for marketing or promotional purposes.
+Consent belongs to this program only.
+We do not transfer your permission to another sender. Text messaging originator opt-in data and consent are not disclosed to third parties for their independent use, including independent messaging, advertising, or lead generation.
+Limited information may be processed by service providers that help us deliver, administer, secure, or support Beacon, such as Twilio and telecommunications carriers. They receive only information needed for those functions and are not authorized by us to use it for their own marketing or to enroll you in another messaging program. Disclosures compelled by law are addressed below. No other part of this policy permits the sale or transfer of messaging consent.
+5. AI processing and disclosures
+Beacon may use AI to interpret a request, summarize relevant information, and prepare a response. Relevant conversation content may be processed by an AI service provider acting on our behalf. Authorized personnel may review conversations to provide support, confirm a response, or address an administrative matter.
+We do not use your messages, contact information, or connected accounting records to train public or general-purpose AI models, and we do not authorize our AI providers to use those data for their own model training.
+We may disclose information to communications, hosting, storage, security, and AI-processing providers as needed to operate Beacon; to authorized trust personnel or professional advisers who need the information for your request; or when legally required to respond to lawful process. We may also make legally permitted disclosures necessary to address fraud, security incidents, or threats to safety. These purposes do not authorize marketing use or the transfer of messaging consent.
+Providers may process information in the United States or other locations where they operate. Their processing is subject to the applicable provider agreements and legal requirements. This policy does not describe the independent services of websites or providers you choose to use outside Beacon.
+6. SMS choices, frequency, and help
+Message frequency varies
+according to your requests, conversations, and the reminders or administrative updates you choose to receive. Messages may recur while you remain enrolled.
+Message and data rates may apply.
+We obtain an affirmative, program-specific opt-in before enrolling you in recurring SMS/MMS messages. Supplying a phone number, being associated with the trust, starting a web chat, or accepting general terms does not by itself enroll you. A reply to an inquiry you initiate is limited to that exchange unless you separately consent to ongoing messages.
+To stop messages, reply STOP.
+You may also use another supported standard opt-out keyword or contact
+idealimagellc@gmail.com
+with your request. After an opt-out, we stop further program messages except for one confirmation of your request. Re-enrollment requires a new affirmative opt-in.
+For help, reply HELP
+while subscribed, or email
+idealimagellc@gmail.com
+at any time. Email remains available after an SMS opt-out. Choosing not to receive texts is not a condition of purchasing anything. Contact us to arrange another available communication method.
+SMS withdrawal does not itself delete past records or revoke an accounting connection. See the retention and request sections below. Additional program conditions appear in the
+SMS terms
+.
+7. Retention and deletion
+We retain information for as long as reasonably needed for the purposes described here, including handling active requests, authorized trust administration, security, and applicable legal or recordkeeping duties. Retention depends on the information's sensitivity, the purpose of processing, and any obligations to preserve particular records.
+Consent records may be retained to document permission and resolve complaints. We may keep a limited suppression record after an opt-out so that your number is not contacted again without fresh consent. Deletion requests may therefore not remove all compliance, trust, or legally required records.
+When information is no longer needed, we delete or de-identify it through the applicable systems. Backup copies and provider-held records may follow separate retention cycles or legal requirements. We do not promise instantaneous deletion from all systems.
+8. Security and sensitive information
+We use reasonable administrative and technical safeguards appropriate to the information handled, including restricting access to authorized people and service providers. No method of storage or transmission can be guaranteed completely secure.
+Ordinary SMS/MMS is not a secure document-delivery or end-to-end encrypted channel. Do not send passwords, one-time sign-in codes, Social Security numbers, full bank or payment-card details, private keys, medical records, or confidential trust documents by ordinary text. Ask the operator for an appropriate secure method when sensitive information is needed.
+Verify requests for transfers, changes to payment instructions, or disclosure of sensitive records directly with an authorized human using a previously verified contact method. An AI-generated message alone is not proof of authority.
+9. Website technologies
+These public policy pages do not include advertising pixels, third-party analytics scripts, externally loaded fonts, or tracking cookies placed by our page code. The website host may still process basic request logs and technical information needed to provide and secure the website.
+A separate authenticated application or web-chat interface may use session or security technologies to function. Any additional nonessential tracking must be disclosed in the applicable interface or an updated policy before it is introduced.
+10. Privacy requests and connections
+You may contact
+idealimagellc@gmail.com
+to ask about our practices or request access to, correction of, or deletion of information associated with you. Depending on your location and applicable law, you may have additional rights to object to or restrict processing or to make a complaint to a regulator. We honor applicable rights and may verify your identity before disclosing or changing records.
+Some requests may be limited by duties to maintain trust records, protect other people's information, or comply with law. We will explain applicable limits when responding.
+An authorized operator can revoke a connected account's authorization through the account provider's connection settings or Beacon's disconnect process. This stops further authorized access through that connection, but does not automatically delete previously retained information or change SMS preferences.
+11. Children
+Beacon is intended for adults participating in authorized trust administration and is not directed to children under 13. We do not knowingly collect personal information directly from children under 13 through the messaging program. Contact
+idealimagellc@gmail.com
+if you believe a child has submitted information so we can investigate and take appropriate action.
+12. Updates and contact
+We may revise this policy to reflect changes to Beacon or its practices and will update the date above. We will provide additional notice or obtain additional consent when required. A policy update does not automatically expand an existing SMS opt-in to a new sender or message purpose.
+Operator:
+[LEGAL OPERATOR NAME]
+Administrative contact:
+Aaron Jones
+Email:
+idealimagellc@gmail.com

@@ -1,0 +1,100 @@
+BEACON — PROPOSED CAMPAIGN COPY
+Drafted September 8, 2026
+
+IMPORTANT: This file proposes an enrollment flow. It does not prove that any
+flow, records, or backend exists. Replace every bracketed deployment field.
+Use only statements that match the implemented system. Do not submit this
+flow unchanged merely because policy pages have been uploaded.
+
+1. CAMPAIGN DESCRIPTION
+Beacon is a private AI-assisted messaging program operated by [LEGAL OPERATOR NAME] for people authorized to communicate about trust administration. Messages provide responses to inquiries, scheduling and appointment confirmations, requested reminders, document-coordination notices, and administrative request updates. Recipients explicitly opt in before recurring messages. The program does not send advertising, fundraising appeals, investment offers, or third-party promotions. Frequency varies with recipients' requests and selected updates. Recipients can reply STOP to cancel or HELP for help. Support is available at idealimagellc@gmail.com.
+
+2. HOW DO END-USERS CONSENT TO RECEIVE MESSAGES?
+Proposed web-chat path. Use only after it is implemented and verified.
+The text below is 1414 characters before placeholder replacement.
+
+Recipients opt in through Beacon's web-chat enrollment at [ACTUAL CHAT URL]. The operator is [LEGAL OPERATOR NAME]. Before SMS enrollment, the chat displays a separate optional disclosure covering recurring, automated, non-promotional Beacon texts for trust-related questions, scheduling, requested reminders, and administrative updates. It states that message frequency varies; message and data rates may apply; recipients can reply STOP to cancel or HELP for help; and consent is not a condition of purchase. It links to [PUBLIC PRIVACY URL] and [PUBLIC TERMS URL]. The recipient supplies their own mobile number and affirmatively selects the dedicated "I agree to receive Beacon text messages" control. Declining does not enroll the number. Beacon records the number, disclosure version, timestamp, source, and affirmative response before sending an SMS enrollment confirmation. General chat participation or a generic "yes" to joining a chat is not treated as SMS consent. We do not send an unsolicited text asking for permission. Public screenshots of the implemented disclosure, consent action, and confirmation are available at [ACTUAL CONSENT EVIDENCE URL]. The program uses no purchased lists, shared consents, or promotional messaging. STOP requests suppress further messages, apart from one opt-out confirmation. Support: idealimagellc@gmail.com. This is the only enrollment path used for this campaign.
+
+3. DISCLOSURE TO SHOW IN THE WEBSITE / WEB CHAT
+Show the complete text next to a separate unchecked checkbox or a dedicated
+SMS-consent button, BEFORE sending any outbound SMS.
+
+I agree to receive recurring automated SMS/MMS messages from Beacon, operated by [LEGAL OPERATOR NAME], at the mobile number I provide. Messages concern trust administration, responses to my questions, scheduling, requested reminders, and administrative updates. Message frequency varies. Message and data rates may apply. Reply STOP to cancel or HELP for help. Consent is not a condition of purchase. I agree to the Terms & Conditions [PUBLIC TERMS URL] and acknowledge the Privacy Policy [PUBLIC PRIVACY URL]. Support: idealimagellc@gmail.com.
+
+Consent control: I agree to receive Beacon text messages.
+Decline control: Continue without text messages.
+The consent checkbox must start unchecked. Do not hide the disclosure behind
+an accordion, general terms acceptance, a footer, or the AI's freeform reply.
+Do not require SMS enrollment to use unrelated website or web-chat features.
+
+4. FIRST SMS AFTER A VALID WEB OPT-IN
+Beacon: You are enrolled in recurring trust-administration messages. Frequency varies. Message and data rates may apply. Reply STOP to cancel or HELP for help. Support: idealimagellc@gmail.com.
+
+5. HELP RESPONSE
+Beacon support: idealimagellc@gmail.com. For trust-administration messaging help, email us. Message frequency varies. Message and data rates may apply. Reply STOP to cancel.
+
+6. STOP RESPONSE
+Beacon: You are unsubscribed. No more program messages will be sent. For assistance, email idealimagellc@gmail.com.
+
+7. REPRESENTATIVE PROGRAM MESSAGES
+Sample 1:
+Beacon: Your requested meeting is scheduled for [date] at [time]. Reply with any scheduling questions. Reply STOP to cancel texts or HELP for help.
+
+Sample 2:
+Beacon: Reminder about the administrative task you asked us to track: [task description], due [date]. Do not send confidential documents by text. Reply STOP to cancel or HELP for help.
+
+Sample 3:
+Beacon: We received your request for [administrative assistance]. An authorized person will review it. Reply STOP to cancel texts or HELP for help.
+
+Samples are templates, not claims that a meeting or request exists. Use only
+the types of messages actually sent. Do not put account numbers, beneficiary
+names, trust balances, documents, or secrets into the registration samples.
+If actual messages contain URLs, include a representative branded URL in a
+sample and select the embedded-links field accordingly. Do not use a generic
+public link shortener. Revise the sample whenever the actual program differs.
+
+8. OPTIONAL SECOND CONFIRMATION
+A second SMS confirmation is a design choice, not a universal 10DLC mandate.
+A first valid web opt-in may authorize an SMS that asks the number holder to
+confirm. A proposed message AFTER that initial authorization is:
+
+Beacon: You requested recurring trust-administration texts. Reply CONFIRM to complete enrollment. Message frequency varies; message and data rates may apply. Reply STOP to cancel or HELP for help.
+
+CONFIRM is an application-managed keyword here, not a claim about Twilio's
+default keywords. Implement it, retain proof of the initial web authorization,
+and describe this extra step in message_flow if used. Do not enable recurring
+messages until the second step succeeds when you choose this design. Limit
+and expire pending confirmations and prevent signup-form abuse. An unsolicited
+"May I text you?" message does not become permissible just because it asks
+for consent.
+
+9. KEYWORD AND OPT-OUT IMPLEMENTATION
+The principal draft above is a web-chat enrollment path, not a keyword signup
+advertisement. Do not claim a text-to-join method unless it really exists and
+its disclosures, number, keywords, and responses are documented. Configure
+actual STOP/HELP responses before use. Handle START/UNSTOP according to your
+Twilio configuration and re-enrollment flow; provider unblocking is not by
+itself proof that an unrelated message purpose is authorized.
+
+Configure opted-out status outside the language model. Check it before every
+outbound send, including queued reminders and retries. Handle clear requests
+such as "please stop texting me" and email withdrawal requests. Never switch
+numbers to circumvent an opt-out. Keep sufficient consent evidence securely;
+do not upload real recipients' consent logs or phone numbers to public GitHub.
+
+With Advanced Opt-Out, a webhook's OptOutType value indicates a keyword action
+Twilio has already processed and answered. Update application state and do not
+send a second AI-generated response. Test opt-in, STOP, HELP, natural-language
+withdrawal, queues, and re-enrollment end to end on the actual sender setup.
+
+SOURCES (official guidance reviewed September 8, 2026)
+Twilio consent and messaging policy:
+https://www.twilio.com/en-us/legal/messaging-policy
+Twilio complete consent-flow guidance:
+https://www.twilio.com/docs/api/errors/30909
+Twilio missing consent disclosure guidance:
+https://www.twilio.com/docs/api/errors/30924
+Twilio campaign fields and message samples:
+https://www.twilio.com/docs/messaging/compliance/a2p-10dlc/collect-business-info
+Twilio Advanced Opt-Out:
+https://www.twilio.com/docs/messaging/tutorials/advanced-opt-out

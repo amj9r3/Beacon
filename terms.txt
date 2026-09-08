@@ -1,0 +1,82 @@
+Beacon / Trust communications
+Terms & Conditions
+The rules for Beacon's private assistant and consent-based SMS/MMS messaging program.
+Last updated:
+September 8, 2026
+Your messaging terms at a glance
+Program:
+Beacon — an AI-assisted trust administration and coordination service.
+Messages:
+Non-promotional responses, scheduling, reminders, and administrative updates you request.
+Frequency and cost:
+Message frequency varies. Message and data rates may apply.
+Stop or get help:
+Reply STOP to cancel; reply HELP for help. Support:
+idealimagellc@gmail.com
+.
+Carrier notice:
+Carriers are not liable for delayed or undelivered messages.
+1. Service and operator
+These Terms & Conditions govern Beacon's public information pages, private administrative assistant, and SMS/MMS messaging program. Beacon is operated by
+[LEGAL OPERATOR NAME]
+("we," "us," or "our"). Aaron Jones is the administrative contact.
+Beacon helps authorized participants communicate about trust administration. Access to internal records or connected systems is separately controlled. Reading these pages or receiving a message does not establish a right to access trust assets, beneficiary information, or another person's records.
+By affirmatively agreeing to these terms when offered as part of enrollment or authorized access, you agree to follow them. Acceptance of these terms alone is not consent to receive recurring text messages; SMS enrollment requires a separate affirmative choice.
+2. Beacon SMS/MMS program
+Program name: Beacon.
+The program provides non-promotional administrative messaging for the operator's trust-related activities. Messages may include responses to inquiries, scheduling and appointment confirmations, requested reminders, document-coordination notices, and status updates about an administrative request.
+Messages may be generated or assisted by AI and may also come from authorized personnel. This program does not send advertising, fundraising appeals, investment offers, unsolicited sales pitches, or third-party promotions.
+Message frequency varies
+with your conversations, requests, and selected reminders or updates. Messages may recur while you remain enrolled.
+Message and data rates may apply.
+Your mobile provider's plan determines any charges for sending or receiving messages and using data.
+3. Enrollment and consent
+Enroll only using a mobile number you own or are authorized to use. Before an affirmative opt-in, the enrollment disclosure identifies Beacon and its operator, the message purposes, frequency, possible carrier charges, cancellation and help instructions, and the Privacy Policy and Terms & Conditions.
+SMS enrollment is voluntary and separate from general website or web-chat use. No preselected checkbox or passive acceptance enrolls you. Consent is not a condition of purchasing goods or services. Providing a number or being a trust contact is not sufficient on its own.
+An inbound question permits an appropriate response to that question, not enrollment in unrelated or ongoing updates. We request separate consent for recurring messages. We do not use purchased contact lists, transferred opt-ins, or someone else's consent to enroll you.
+Permission to receive messages does not authorize an AI system to approve transactions, disclose confidential records, or act as a trustee. Those actions require separate authority and controls.
+4. Stopping messages and getting help
+Reply STOP to unsubscribe.
+Supported standard cancellation keywords also include STOPALL, UNSUBSCRIBE, CANCEL, END, QUIT, REVOKE, and OPTOUT. You can also send a clear request to stop texting to
+idealimagellc@gmail.com
+.
+After you opt out, no further program messages will be sent except one confirmation that your request was processed. To enroll again, complete the enrollment process and provide fresh consent. Do not assume a previous enrollment remains valid after an opt-out.
+Reply HELP for assistance
+while subscribed, or email
+idealimagellc@gmail.com
+at any time. HELP is a support request, not consent to new messages. Email support remains available after you unsubscribe.
+Keep your number current and notify us if it is reassigned or you no longer control it. Withdrawing SMS consent does not terminate separate trust relationships, change your legal rights, or automatically delete records.
+5. Delivery and availability
+Delivery depends on mobile networks, device settings, service providers, and internet or carrier availability. Messages can be delayed, filtered, lost, duplicated, or arrive out of order. Service is not guaranteed on every device or network.
+Carriers are not liable for delayed or undelivered messages.
+Beacon does not guarantee delivery or continuous service. Do not rely on a text message as the sole notice of a deadline, payment, meeting, or other important matter.
+This is not an emergency service. Use emergency services for an emergency, and contact the responsible human directly for urgent or legally time-sensitive matters.
+6. AI assistance and human authority
+AI-generated replies can contain errors, omit important context, or be outdated. Verify important facts, dates, figures, and instructions before relying on them. Beacon does not replace a trustee, attorney, accountant, investment adviser, or other qualified professional.
+Unless an authorized human separately confirms an action through the appropriate process, an AI message does not authorize a transfer, direct an investment, make a distribution, amend a trust instrument, create a binding commitment, or serve as formal legal notice.
+Never rely only on an assistant's message to change bank instructions, send funds, or release confidential records. Confirm sensitive requests through a previously verified human contact.
+7. Authorized use and private integrations
+Use Beacon only for lawful, authorized requests. Do not impersonate another person, misrepresent your authority, submit information you lack permission to disclose, attempt to bypass access controls, or use the system for spam, fraud, harassment, malicious software, or other prohibited conduct.
+Do not submit passwords, full financial account credentials, private keys, medical records, or sensitive trust documents through ordinary SMS/MMS. Ask for an approved secure communication method.
+Only an authorized operator may connect an external accounting or administrative system. A QuickBooks Online or other provider connection must be separately authorized and remains subject to that provider's terms and granted permissions. SMS consent is not authorization to access a connected system.
+8. Privacy and confidentiality
+Our
+Privacy Policy
+explains what information Beacon handles, AI and service-provider processing, retention, and privacy requests. Mobile information and messaging consent are not sold or shared with third parties or affiliates for their marketing or promotional purposes.
+Limited processing by messaging, hosting, and AI providers may be needed to deliver the service. Authorized personnel may review conversations. Ordinary text messages are not a substitute for secure document exchange. Do not send another person's confidential information without appropriate authority.
+9. Service limitations
+To the extent permitted by applicable law, Beacon is provided on an "as available" basis without a promise of uninterrupted operation, complete accuracy, or fitness for a particular purpose. You remain responsible for verifying important information and using authorized processes for consequential decisions.
+Nothing in these terms excludes liability that cannot lawfully be excluded, waives a non-waivable legal right, or overrides duties imposed by applicable law or the governing trust instrument. These terms do not determine or amend beneficiary rights, trustee duties, or ownership of trust assets.
+10. Changes and termination
+We may limit, suspend, or end access to protect the service, address unauthorized use, comply with law, or discontinue the program. You may stop using Beacon and withdraw messaging consent at any time as described above.
+We may update these terms and the date shown on this page. When a change requires additional notice or consent, we will provide it or request it before applying the change. Posting new terms does not silently expand the sender, purpose, or scope of your SMS consent.
+11. Contact
+Program:
+Beacon
+Operator:
+[LEGAL OPERATOR NAME]
+Administrative contact:
+Aaron Jones
+Support and privacy:
+idealimagellc@gmail.com
+For SMS support, reply HELP while subscribed. For cancellation, reply STOP. Contact the email address above for assistance after an opt-out or for an alternative communication method.

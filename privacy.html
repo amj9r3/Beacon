@@ -3,69 +3,151 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="How Beacon handles conversations, mobile information, consent, and authorized administrative data.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="color-scheme" content="dark light">
 <title>Beacon — Privacy Policy</title>
-<link rel="stylesheet" href="style.css">
+<style>
+:root{color-scheme:dark;--bg:#0b0e14;--panel:#131923;--panel2:#10151e;--ink:#e6e9ef;--muted:#a5afc0;--line:#293243;--signal:#f2b441;--link:#f6c96b;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:17px;line-height:1.7}
+a{color:var(--link);text-underline-offset:4px;overflow-wrap:anywhere}a:hover{text-decoration-thickness:2px}a:focus-visible{outline:3px solid var(--signal);outline-offset:5px;border-radius:3px}
+.skip{position:absolute;top:-100px;left:20px;padding:12px 18px;background:var(--signal);color:var(--bg);z-index:10}.skip:focus{top:12px}
+header{border-bottom:1px solid var(--line);background:var(--panel2)}.header-inner{max-width:var(--max);margin:auto;padding:22px 28px;display:flex;align-items:center;gap:16px;justify-content:space-between;flex-wrap:wrap}
+.brand{display:flex;gap:12px;align-items:center;color:var(--ink);text-decoration:none;font-size:23px;font-weight:700;letter-spacing:-.5px}.beacon{display:inline-block;position:relative;width:24px;height:24px;border:1px solid var(--signal);border-radius:50%;flex:none}.beacon:after{content:"";position:absolute;inset:7px;background:var(--signal);border-radius:50%}
+.top-nav{display:flex;gap:22px;flex-wrap:wrap;font-size:14px}.top-nav a{text-decoration:none;color:var(--muted)}.top-nav a[aria-current="page"]{color:var(--signal)}
+.shell{max-width:var(--max);margin:auto;padding:42px 28px 26px}.draft-note{padding:13px 17px;border:1px solid #856527;background:#251e11;border-radius:8px;margin:0 0 30px;font-size:14px;color:#f4d592}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 210px;gap:58px;align-items:start}.article{min-width:0}.eyebrow{color:var(--signal);font-size:12px;font-weight:650;letter-spacing:1.7px;text-transform:uppercase;margin:0 0 9px}
+h1{font-size:clamp(35px,5vw,52px);line-height:1.12;letter-spacing:-1.8px;margin:0 0 18px;font-weight:700}h2{font-size:23px;line-height:1.3;letter-spacing:-.45px;margin:0 0 14px}h3{font-size:17px;line-height:1.45;margin:24px 0 9px}
+p{margin:0 0 17px}.lede{font-size:19px;color:var(--muted);line-height:1.65;margin-bottom:24px}.meta{font-size:13px;color:var(--muted);margin-bottom:25px}.section{border-top:1px solid var(--line);padding-top:28px;margin-top:32px}.section>p:last-child{margin-bottom:0}
+.summary{padding:20px 22px;border:1px solid var(--line);border-radius:12px;background:var(--panel);margin:24px 0 28px}.summary h2{font-size:17px;margin-bottom:12px}.summary p{margin-bottom:10px;font-size:15px}.summary p:last-child{margin-bottom:0}.summary strong{color:var(--ink)}
+.notice{padding:20px 22px;border-left:3px solid var(--signal);border-radius:0 8px 8px 0;background:var(--panel2);margin:22px 0}.notice p:last-child{margin-bottom:0}
+.required-detail{background:#3a2a0f;color:#ffe0a1;border:1px dashed var(--signal);padding:1px 6px;box-decoration-break:clone;-webkit-box-decoration-break:clone;overflow-wrap:anywhere}
+.toc{position:sticky;top:28px;border-left:1px solid var(--line);padding-left:22px;font-size:13px}.toc h2{font-size:11px;text-transform:uppercase;letter-spacing:1.4px;color:var(--muted);margin-bottom:16px}.toc ol{list-style:none;padding:0;margin:0}.toc li{margin:0 0 12px}.toc a{text-decoration:none;color:var(--muted)}.toc a:hover{color:var(--signal)}
+dl{margin:18px 0}dt{font-weight:650;color:var(--ink);margin-top:18px}dd{margin:4px 0 0;color:var(--muted)}ul{padding-left:23px;margin:14px 0 18px}li{padding-left:2px;margin-bottom:9px}.small{font-size:14px;color:var(--muted)}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;font-size:12px;padding:3px 11px;color:var(--muted);margin-right:6px;margin-bottom:8px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}.button{padding:10px 16px;border:1px solid var(--line);background:var(--panel);border-radius:7px;text-decoration:none;font-size:15px}.button.primary{background:var(--signal);border-color:var(--signal);color:#151009;font-weight:650}
+footer{border-top:1px solid var(--line);max-width:var(--max);margin:35px auto 0;padding:26px 28px 38px;font-size:13px;color:var(--muted)}.foot-links{display:flex;flex-wrap:wrap;gap:20px;margin-bottom:13px}footer p{margin-bottom:6px}.foot-links a{color:var(--muted)}
+@media(max-width:860px){.layout{grid-template-columns:minmax(0,1fr);gap:28px}.toc{display:none;position:static;grid-row:1;border:1px solid var(--line);padding:15px 17px;border-radius:8px}.toc h2{margin-bottom:10px}.toc ol{display:flex;gap:7px 17px;flex-wrap:wrap}.toc li{margin:0}.shell{padding-top:26px}.draft-note{margin-bottom:20px}}
+@media(max-width:480px){body{font-size:16px}.header-inner,.shell{padding-left:20px;padding-right:20px}.header-inner{gap:15px}.top-nav{gap:18px}.lede{font-size:18px}.summary,.notice{padding:17px}.toc{font-size:12px}h2{font-size:21px}.section{padding-top:23px;margin-top:27px}footer{padding-left:20px;padding-right:20px}h1{letter-spacing:-1.1px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{:root{color-scheme:light;--bg:#fff;--ink:#111;--muted:#444;--line:#bbb;--panel:#f5f5f5;--panel2:#f8f8f8;--signal:#6e4800;--link:#111}body{font-size:11pt}.top-nav,.toc,.skip{display:none}.layout{display:block}.header-inner,.shell,footer{max-width:none;padding-left:0;padding-right:0}.shell{padding-top:20px}h1{font-size:30pt}h2{break-after:avoid}p{orphans:3;widows:3}.summary,.notice{break-inside:avoid}footer{margin-top:20px}.required-detail{color:#111;background:#eee}.draft-note{color:#111;background:#eee}}
+</style>
 </head>
 <body>
+<!-- PRE-PUBLICATION: Replace [LEGAL OPERATOR NAME], verify all actual practices,
+     and remove the draft notice below only after review. No messaging backend is included. -->
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="header-inner"><a class="brand" href="index.html"><span class="beacon" aria-hidden="true"></span>Beacon</a><nav class="top-nav" aria-label="Main navigation"><a href="index.html">Overview</a><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a></nav></div></header>
+<div class="shell">
+<!-- DRAFT_NOTICE_START -->
+<p class="draft-note"><strong>Draft for operator review.</strong> Complete the highlighted operator name and confirm the described practices before publishing.</p>
+<!-- DRAFT_NOTICE_END -->
+<div class="layout">
+<main class="article" id="main">
+<p class="eyebrow">Beacon / Trust communications</p>
+<h1>Privacy Policy</h1>
+<p class="lede">How Beacon handles conversations, mobile information, consent, and authorized administrative data.</p>
+<p class="meta">Last updated: <time datetime="2026-09-08">September 8, 2026</time></p>
+<div class="summary"><h2>Messaging privacy at a glance</h2>
+<p><strong>Purpose:</strong> Private, non-promotional trust coordination and requested updates.</p>
+<p><strong>Mobile data:</strong> No sale or sharing for third-party or affiliate marketing. No transfer of your messaging consent.</p>
+<p><strong>Frequency:</strong> Varies with your requests and selected updates. Message and data rates may apply.</p>
+<p><strong>Your controls:</strong> Reply STOP to unsubscribe; reply HELP for help, or contact <a href="mailto:idealimagellc@gmail.com">idealimagellc@gmail.com</a>.</p></div>
+<section class="section" id="operator"><h2>1. Operator and scope</h2>
 
-<header class="top">
-  <div class="top-inner">
-    <span class="beacon" aria-hidden="true"><span class="ring"></span><span class="core"></span></span>
-    <span class="wordmark">Beacon</span>
-    <span class="tag">Privacy</span>
-  </div>
-</header>
+<p>Beacon is a private, AI-assisted administrative and messaging service operated by <mark class="required-detail">[LEGAL OPERATOR NAME]</mark> ("we," "us," or "our") for trust-related coordination. Our administrative contact is Aaron Jones.</p>
+<p>This Privacy Policy applies to people who visit Beacon's public information pages, communicate with Beacon or its operator, or enroll in the Beacon SMS/MMS program. It also describes operator-authorized integrations. Public access to these pages does not grant access to private trust records or administrative systems.</p>
+<p>The messaging program supports administrative questions, scheduling, appointment confirmations, requested reminders, document-coordination notices, and updates about requests you have made. It is not an advertising, fundraising, or investment-solicitation program.</p>
 
-<div class="wrap">
-<main class="doc">
-  <a class="back" href="index.html">&larr; Back</a>
-  <p class="eyebrow">Effective 14 June 2026</p>
-  <h1 style="font-size:32px;margin-bottom:24px;">Privacy Policy</h1>
+</section>
+<section class="section" id="information"><h2>2. Information we handle</h2>
 
-  <p>This policy describes how the Beacon software agent ("Beacon," "the app") handles data. Beacon is a private application operated by Aaron Jones ("the operator") for the operator's sole personal use. It is not offered to the public and has no users other than the operator.</p>
+<dl>
+<dt>Contact and relationship information</dt><dd>Your mobile number, name, email address, communication preferences, and information you choose to provide about your relationship to the trust or the operator.</dd>
+<dt>Conversations and requests</dt><dd>Messages you send and receive, information or attachments you provide, administrative requests, and AI-generated or human-written replies. Please limit submissions to information needed for your request.</dd>
+<dt>Messaging and consent records</dt><dd>The number enrolled; the consent wording shown and your affirmative response; when and how consent was obtained; opt-out or re-enrollment history; message identifiers; timestamps; delivery status; and records needed to administer your messaging preferences.</dd>
+<dt>Technical information</dt><dd>Our hosting and communications providers may process IP addresses, browser or device information, request logs, diagnostic information, and security events when you access the service.</dd>
+<dt>Authorized integration data</dt><dd>When an authorized operator connects an accounting service such as QuickBooks Online, Beacon may access accounts, transactions, balances, and related records permitted by that connection. A messaging recipient is not automatically connected to an accounting service and does not receive access to another person's or the trust's records.</dd>
+</dl>
 
-  <h2>1. Who this covers</h2>
-  <p>Beacon has a single user: its operator. It does not create accounts for, collect data from, or provide services to any other person. Where this policy refers to "your data," it means the operator's own data.</p>
+</section>
+<section class="section" id="use"><h2>3. How we use information</h2>
 
-  <h2>2. What data Beacon accesses</h2>
-  <p>With the operator's authorization through Intuit's OAuth 2.0 flow, Beacon accesses accounting data from the operator's own QuickBooks Online company. Depending on the scopes the operator grants, this may include accounts, transactions, balances, and related financial records. Beacon accesses this data to help the operator review and organize their own books.</p>
+<p>We use information to respond to your requests, coordinate authorized trust administration, deliver the messages you requested, maintain conversation context, provide support, verify permissions, protect the service, troubleshoot delivery, and honor your communication preferences.</p>
+<p>Consent and delivery records help us document enrollment, investigate complaints, prevent unwanted messages, and meet applicable recordkeeping duties. We do not use this program to build advertising audiences or sell leads.</p>
 
-  <h2>3. How data is used</h2>
-  <p>Data accessed through QuickBooks Online is used only to provide the operator with summaries, analysis, and organization of their own financial information. It is not used for advertising, profiling of other people, training of third-party models, or any purpose beyond the operator's personal financial management.</p>
+</section>
+<section class="section" id="mobile"><h2>4. Mobile information and consent</h2>
 
-  <h2>4. Storage and security</h2>
-  <p>Any data Beacon retains is stored on systems controlled by the operator. Access credentials (such as OAuth tokens) are stored in restricted, owner-only files and are not embedded in documents, source code, or shared channels. The operator is responsible for the security of the systems on which Beacon runs.</p>
-
-  <h2>5. Sharing and disclosure</h2>
-  <p>Beacon does not sell, rent, trade, or otherwise disclose data to third parties. No data is shared with advertisers, data brokers, or analytics providers. Data may be processed by infrastructure the operator chooses to use (for example, <span style="color:#C9CFDB">local hardware the operator controls</span>), solely to operate the app for the operator.</p>
-
-  <h2>6. Retention and deletion</h2>
-  <p>The operator decides what data Beacon retains and for how long, and may delete it at any time. Revoking Beacon's QuickBooks Online connection (see Section 7) stops further access.</p>
-
-  <h2>7. Revoking access</h2>
-  <p>The operator can disconnect Beacon from QuickBooks Online at any time through Intuit's account settings (Apps &rarr; Connected apps) or via the <a href="disconnect.html">disconnect page</a>. Revocation ends Beacon's access to the QuickBooks Online company immediately.</p>
-
-  <h2>8. Children</h2>
-  <p>Beacon is a private tool for an adult operator and is not directed to children.</p>
-
-  <h2>9. Changes</h2>
-  <p>If the operator changes how Beacon handles data, this policy will be updated and the effective date above revised.</p>
-
-  <h2>10. Contact</h2>
-  <p>Questions about this policy can be directed to <span style="color:#C9CFDB">idealimagellc@gmail.com</span>.</p>
-</main>
-
-<footer>
-  <div class="foot-links">
-    <a href="eula.html">Terms&nbsp;of&nbsp;Use</a>
-    <a href="privacy.html">Privacy&nbsp;Policy</a>
-    <a href="connect.html">Connect</a>
-    <a href="disconnect.html">Disconnect</a>
-    <a href="mailto:idealimagellc@gmail.com">Contact</a>
-  </div>
-  <p class="foot-meta">Beacon · private instance · operated by Aaron Jones</p>
-</footer>
+<div class="notice">
+<p><strong>Your mobile information is not a marketing asset.</strong> We do not sell, rent, or share mobile phone numbers, other mobile information, or messaging opt-in and consent data with third parties or affiliates for marketing or promotional purposes.</p>
+<p><strong>Consent belongs to this program only.</strong> We do not transfer your permission to another sender. Text messaging originator opt-in data and consent are not disclosed to third parties for their independent use, including independent messaging, advertising, or lead generation.</p>
 </div>
+<p>Limited information may be processed by service providers that help us deliver, administer, secure, or support Beacon, such as Twilio and telecommunications carriers. They receive only information needed for those functions and are not authorized by us to use it for their own marketing or to enroll you in another messaging program. Disclosures compelled by law are addressed below. No other part of this policy permits the sale or transfer of messaging consent.</p>
 
+</section>
+<section class="section" id="providers"><h2>5. AI processing and disclosures</h2>
+
+<p>Beacon may use AI to interpret a request, summarize relevant information, and prepare a response. Relevant conversation content may be processed by an AI service provider acting on our behalf. Authorized personnel may review conversations to provide support, confirm a response, or address an administrative matter.</p>
+<p>We do not use your messages, contact information, or connected accounting records to train public or general-purpose AI models, and we do not authorize our AI providers to use those data for their own model training.</p>
+<p>We may disclose information to communications, hosting, storage, security, and AI-processing providers as needed to operate Beacon; to authorized trust personnel or professional advisers who need the information for your request; or when legally required to respond to lawful process. We may also make legally permitted disclosures necessary to address fraud, security incidents, or threats to safety. These purposes do not authorize marketing use or the transfer of messaging consent.</p>
+<p>Providers may process information in the United States or other locations where they operate. Their processing is subject to the applicable provider agreements and legal requirements. This policy does not describe the independent services of websites or providers you choose to use outside Beacon.</p>
+
+</section>
+<section class="section" id="sms"><h2>6. SMS choices, frequency, and help</h2>
+
+<p><strong>Message frequency varies</strong> according to your requests, conversations, and the reminders or administrative updates you choose to receive. Messages may recur while you remain enrolled. <strong>Message and data rates may apply.</strong></p>
+<p>We obtain an affirmative, program-specific opt-in before enrolling you in recurring SMS/MMS messages. Supplying a phone number, being associated with the trust, starting a web chat, or accepting general terms does not by itself enroll you. A reply to an inquiry you initiate is limited to that exchange unless you separately consent to ongoing messages.</p>
+<p><strong>To stop messages, reply STOP.</strong> You may also use another supported standard opt-out keyword or contact <a href="mailto:idealimagellc@gmail.com">idealimagellc@gmail.com</a> with your request. After an opt-out, we stop further program messages except for one confirmation of your request. Re-enrollment requires a new affirmative opt-in.</p>
+<p><strong>For help, reply HELP</strong> while subscribed, or email <a href="mailto:idealimagellc@gmail.com">idealimagellc@gmail.com</a> at any time. Email remains available after an SMS opt-out. Choosing not to receive texts is not a condition of purchasing anything. Contact us to arrange another available communication method.</p>
+<p>SMS withdrawal does not itself delete past records or revoke an accounting connection. See the retention and request sections below. Additional program conditions appear in the <a href="terms.html#sms-program">SMS terms</a>.</p>
+
+</section>
+<section class="section" id="retention"><h2>7. Retention and deletion</h2>
+
+<p>We retain information for as long as reasonably needed for the purposes described here, including handling active requests, authorized trust administration, security, and applicable legal or recordkeeping duties. Retention depends on the information's sensitivity, the purpose of processing, and any obligations to preserve particular records.</p>
+<p>Consent records may be retained to document permission and resolve complaints. We may keep a limited suppression record after an opt-out so that your number is not contacted again without fresh consent. Deletion requests may therefore not remove all compliance, trust, or legally required records.</p>
+<p>When information is no longer needed, we delete or de-identify it through the applicable systems. Backup copies and provider-held records may follow separate retention cycles or legal requirements. We do not promise instantaneous deletion from all systems.</p>
+
+</section>
+<section class="section" id="security"><h2>8. Security and sensitive information</h2>
+
+<p>We use reasonable administrative and technical safeguards appropriate to the information handled, including restricting access to authorized people and service providers. No method of storage or transmission can be guaranteed completely secure.</p>
+<p>Ordinary SMS/MMS is not a secure document-delivery or end-to-end encrypted channel. Do not send passwords, one-time sign-in codes, Social Security numbers, full bank or payment-card details, private keys, medical records, or confidential trust documents by ordinary text. Ask the operator for an appropriate secure method when sensitive information is needed.</p>
+<p>Verify requests for transfers, changes to payment instructions, or disclosure of sensitive records directly with an authorized human using a previously verified contact method. An AI-generated message alone is not proof of authority.</p>
+
+</section>
+<section class="section" id="web"><h2>9. Website technologies</h2>
+
+<p>These public policy pages do not include advertising pixels, third-party analytics scripts, externally loaded fonts, or tracking cookies placed by our page code. The website host may still process basic request logs and technical information needed to provide and secure the website.</p>
+<p>A separate authenticated application or web-chat interface may use session or security technologies to function. Any additional nonessential tracking must be disclosed in the applicable interface or an updated policy before it is introduced.</p>
+
+</section>
+<section class="section" id="requests"><h2>10. Privacy requests and connections</h2>
+
+<p>You may contact <a href="mailto:idealimagellc@gmail.com">idealimagellc@gmail.com</a> to ask about our practices or request access to, correction of, or deletion of information associated with you. Depending on your location and applicable law, you may have additional rights to object to or restrict processing or to make a complaint to a regulator. We honor applicable rights and may verify your identity before disclosing or changing records.</p>
+<p>Some requests may be limited by duties to maintain trust records, protect other people's information, or comply with law. We will explain applicable limits when responding.</p>
+<p>An authorized operator can revoke a connected account's authorization through the account provider's connection settings or Beacon's disconnect process. This stops further authorized access through that connection, but does not automatically delete previously retained information or change SMS preferences.</p>
+
+</section>
+<section class="section" id="children"><h2>11. Children</h2>
+
+<p>Beacon is intended for adults participating in authorized trust administration and is not directed to children under 13. We do not knowingly collect personal information directly from children under 13 through the messaging program. Contact <a href="mailto:idealimagellc@gmail.com">idealimagellc@gmail.com</a> if you believe a child has submitted information so we can investigate and take appropriate action.</p>
+
+</section>
+<section class="section" id="changes"><h2>12. Updates and contact</h2>
+
+<p>We may revise this policy to reflect changes to Beacon or its practices and will update the date above. We will provide additional notice or obtain additional consent when required. A policy update does not automatically expand an existing SMS opt-in to a new sender or message purpose.</p>
+<p><strong>Operator:</strong> <mark class="required-detail">[LEGAL OPERATOR NAME]</mark><br><strong>Administrative contact:</strong> Aaron Jones<br><strong>Email:</strong> <a href="mailto:idealimagellc@gmail.com">idealimagellc@gmail.com</a></p>
+
+</section>
+</main>
+<aside class="toc" aria-label="On this page"><h2>On this page</h2><ol><li><a href="#operator">1. Operator and scope</a></li><li><a href="#information">2. Information we handle</a></li><li><a href="#use">3. How we use information</a></li><li><a href="#mobile">4. Mobile information and consent</a></li><li><a href="#providers">5. AI processing and disclosures</a></li><li><a href="#sms">6. SMS choices, frequency, and help</a></li><li><a href="#retention">7. Retention and deletion</a></li><li><a href="#security">8. Security and sensitive information</a></li><li><a href="#web">9. Website technologies</a></li><li><a href="#requests">10. Privacy requests and connections</a></li><li><a href="#children">11. Children</a></li><li><a href="#changes">12. Updates and contact</a></li></ol></aside>
+</div>
+</div>
+<footer>
+<div class="foot-links"><a href="index.html">Overview</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="mailto:idealimagellc@gmail.com">Contact</a></div>
+<p>Beacon · Private trust administration and messaging</p>
+<p>Support and privacy inquiries: <a href="mailto:idealimagellc@gmail.com">idealimagellc@gmail.com</a></p>
+</footer>
 </body>
 </html>

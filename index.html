@@ -3,60 +3,86 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Beacon — private finance agent</title>
-<meta name="description" content="Beacon is a private, single-operator software agent that connects to its owner's own QuickBooks Online company to assist with personal financial management.">
-<link rel="stylesheet" href="style.css">
+<meta name="description" content="Administrative conversations and requested updates, with clear choices about your messages and data.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="color-scheme" content="dark light">
+<title>Beacon — A private assistant for trust coordination.</title>
+<style>
+:root{color-scheme:dark;--bg:#0b0e14;--panel:#131923;--panel2:#10151e;--ink:#e6e9ef;--muted:#a5afc0;--line:#293243;--signal:#f2b441;--link:#f6c96b;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:17px;line-height:1.7}
+a{color:var(--link);text-underline-offset:4px;overflow-wrap:anywhere}a:hover{text-decoration-thickness:2px}a:focus-visible{outline:3px solid var(--signal);outline-offset:5px;border-radius:3px}
+.skip{position:absolute;top:-100px;left:20px;padding:12px 18px;background:var(--signal);color:var(--bg);z-index:10}.skip:focus{top:12px}
+header{border-bottom:1px solid var(--line);background:var(--panel2)}.header-inner{max-width:var(--max);margin:auto;padding:22px 28px;display:flex;align-items:center;gap:16px;justify-content:space-between;flex-wrap:wrap}
+.brand{display:flex;gap:12px;align-items:center;color:var(--ink);text-decoration:none;font-size:23px;font-weight:700;letter-spacing:-.5px}.beacon{display:inline-block;position:relative;width:24px;height:24px;border:1px solid var(--signal);border-radius:50%;flex:none}.beacon:after{content:"";position:absolute;inset:7px;background:var(--signal);border-radius:50%}
+.top-nav{display:flex;gap:22px;flex-wrap:wrap;font-size:14px}.top-nav a{text-decoration:none;color:var(--muted)}.top-nav a[aria-current="page"]{color:var(--signal)}
+.shell{max-width:var(--max);margin:auto;padding:42px 28px 26px}.draft-note{padding:13px 17px;border:1px solid #856527;background:#251e11;border-radius:8px;margin:0 0 30px;font-size:14px;color:#f4d592}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 210px;gap:58px;align-items:start}.article{min-width:0}.eyebrow{color:var(--signal);font-size:12px;font-weight:650;letter-spacing:1.7px;text-transform:uppercase;margin:0 0 9px}
+h1{font-size:clamp(35px,5vw,52px);line-height:1.12;letter-spacing:-1.8px;margin:0 0 18px;font-weight:700}h2{font-size:23px;line-height:1.3;letter-spacing:-.45px;margin:0 0 14px}h3{font-size:17px;line-height:1.45;margin:24px 0 9px}
+p{margin:0 0 17px}.lede{font-size:19px;color:var(--muted);line-height:1.65;margin-bottom:24px}.meta{font-size:13px;color:var(--muted);margin-bottom:25px}.section{border-top:1px solid var(--line);padding-top:28px;margin-top:32px}.section>p:last-child{margin-bottom:0}
+.summary{padding:20px 22px;border:1px solid var(--line);border-radius:12px;background:var(--panel);margin:24px 0 28px}.summary h2{font-size:17px;margin-bottom:12px}.summary p{margin-bottom:10px;font-size:15px}.summary p:last-child{margin-bottom:0}.summary strong{color:var(--ink)}
+.notice{padding:20px 22px;border-left:3px solid var(--signal);border-radius:0 8px 8px 0;background:var(--panel2);margin:22px 0}.notice p:last-child{margin-bottom:0}
+.required-detail{background:#3a2a0f;color:#ffe0a1;border:1px dashed var(--signal);padding:1px 6px;box-decoration-break:clone;-webkit-box-decoration-break:clone;overflow-wrap:anywhere}
+.toc{position:sticky;top:28px;border-left:1px solid var(--line);padding-left:22px;font-size:13px}.toc h2{font-size:11px;text-transform:uppercase;letter-spacing:1.4px;color:var(--muted);margin-bottom:16px}.toc ol{list-style:none;padding:0;margin:0}.toc li{margin:0 0 12px}.toc a{text-decoration:none;color:var(--muted)}.toc a:hover{color:var(--signal)}
+dl{margin:18px 0}dt{font-weight:650;color:var(--ink);margin-top:18px}dd{margin:4px 0 0;color:var(--muted)}ul{padding-left:23px;margin:14px 0 18px}li{padding-left:2px;margin-bottom:9px}.small{font-size:14px;color:var(--muted)}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;font-size:12px;padding:3px 11px;color:var(--muted);margin-right:6px;margin-bottom:8px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}.button{padding:10px 16px;border:1px solid var(--line);background:var(--panel);border-radius:7px;text-decoration:none;font-size:15px}.button.primary{background:var(--signal);border-color:var(--signal);color:#151009;font-weight:650}
+footer{border-top:1px solid var(--line);max-width:var(--max);margin:35px auto 0;padding:26px 28px 38px;font-size:13px;color:var(--muted)}.foot-links{display:flex;flex-wrap:wrap;gap:20px;margin-bottom:13px}footer p{margin-bottom:6px}.foot-links a{color:var(--muted)}
+@media(max-width:860px){.layout{grid-template-columns:minmax(0,1fr);gap:28px}.toc{display:none;position:static;grid-row:1;border:1px solid var(--line);padding:15px 17px;border-radius:8px}.toc h2{margin-bottom:10px}.toc ol{display:flex;gap:7px 17px;flex-wrap:wrap}.toc li{margin:0}.shell{padding-top:26px}.draft-note{margin-bottom:20px}}
+@media(max-width:480px){body{font-size:16px}.header-inner,.shell{padding-left:20px;padding-right:20px}.header-inner{gap:15px}.top-nav{gap:18px}.lede{font-size:18px}.summary,.notice{padding:17px}.toc{font-size:12px}h2{font-size:21px}.section{padding-top:23px;margin-top:27px}footer{padding-left:20px;padding-right:20px}h1{letter-spacing:-1.1px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{:root{color-scheme:light;--bg:#fff;--ink:#111;--muted:#444;--line:#bbb;--panel:#f5f5f5;--panel2:#f8f8f8;--signal:#6e4800;--link:#111}body{font-size:11pt}.top-nav,.toc,.skip{display:none}.layout{display:block}.header-inner,.shell,footer{max-width:none;padding-left:0;padding-right:0}.shell{padding-top:20px}h1{font-size:30pt}h2{break-after:avoid}p{orphans:3;widows:3}.summary,.notice{break-inside:avoid}footer{margin-top:20px}.required-detail{color:#111;background:#eee}.draft-note{color:#111;background:#eee}}
+</style>
 </head>
 <body>
+<!-- PRE-PUBLICATION: Replace [LEGAL OPERATOR NAME], verify all actual practices,
+     and remove the draft notice below only after review. No messaging backend is included. -->
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="header-inner"><a class="brand" href="index.html"><span class="beacon" aria-hidden="true"></span>Beacon</a><nav class="top-nav" aria-label="Main navigation"><a href="index.html" aria-current="page">Overview</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></div></header>
+<div class="shell">
+<!-- DRAFT_NOTICE_START -->
+<p class="draft-note"><strong>Draft for operator review.</strong> Complete the highlighted operator name and confirm the described practices before publishing.</p>
+<!-- DRAFT_NOTICE_END -->
+<div class="layout">
+<main class="article" id="main">
+<p class="eyebrow">Beacon / Service overview</p>
+<h1>A private assistant for trust coordination.</h1>
+<p class="lede">Administrative conversations and requested updates, with clear choices about your messages and data.</p>
+<p class="meta">Last updated: <time datetime="2026-09-08">September 8, 2026</time></p>
+<p><span class="pill">AI-assisted</span><span class="pill">Consent-based messaging</span><span class="pill">Private administration</span></p>
+<div class="actions"><a class="button primary" href="privacy.html">Read the Privacy Policy</a><a class="button" href="terms.html">Read the Terms</a></div>
+<section class="section" id="about"><h2>Private administration. Clear communication.</h2>
 
-<header class="top">
-  <div class="top-inner">
-    <span class="beacon" aria-hidden="true"><span class="ring"></span><span class="core"></span></span>
-    <span class="wordmark">Beacon</span>
-    <span class="tag">Private&nbsp;instance</span>
-  </div>
-</header>
+<p>Beacon is a private AI-assisted administrative and messaging service operated by <mark class="required-detail">[LEGAL OPERATOR NAME]</mark>. It supports authorized trust-related coordination, including administrative questions, scheduling, requested reminders, and updates about ongoing requests.</p>
+<p>Aaron Jones is the administrative contact. Beacon is not a public financial-services offering, an investment solicitation, or a substitute for the authorized people responsible for trust decisions.</p>
 
-<div class="wrap">
-<main>
-  <p class="eyebrow">Single-operator financial agent</p>
-  <h1>One <span class="lit">signal</span>, kept by one operator.</h1>
-  <p class="lede">Beacon is a private software agent that connects to its owner's own QuickBooks&nbsp;Online company to help organize and review personal financial data. It is built and run by one person, for that one person. There are no other users, no public sign-up, and nothing for sale.</p>
+</section>
+<section class="section" id="messaging"><h2>The Beacon messaging program</h2>
 
-  <section>
-    <h2>What it is</h2>
-    <p>Beacon runs on infrastructure the owner controls. It reads financial records from the owner's connected QuickBooks Online company so the owner can see, summarize, and reason about their own books in one place. It is not a product offered to the public and does not act on behalf of anyone but its owner.</p>
-  </section>
+<p>SMS/MMS participation requires an affirmative opt-in. Starting a web conversation or providing your phone number does not automatically subscribe you to text updates.</p>
+<p><strong>Message frequency varies.</strong> Messages depend on your requests and the reminders or administrative updates you select. <strong>Message and data rates may apply.</strong> Reply STOP to cancel or HELP for help while subscribed. Email <a href="mailto:idealimagellc@gmail.com">idealimagellc@gmail.com</a> for support at any time.</p>
+<p>Participation is voluntary and is not a condition of purchasing anything. We do not sell or share mobile information or messaging consent with third parties or affiliates for marketing or promotional purposes.</p>
+<p>Review the <a href="terms.html#sms-program">program terms</a> and <a href="privacy.html">Privacy Policy</a> before enrolling through the operator's designated enrollment process. These public information pages do not themselves enroll you or collect your phone number.</p>
 
-  <section>
-    <h2>What it accesses</h2>
-    <ul class="spec">
-      <li><span class="k">Connects to</span><span class="v">The owner's own QuickBooks Online company, by OAuth&nbsp;2.0 authorization.</span></li>
-      <li><span class="k">Reads</span><span class="v">Accounting records (e.g. accounts, transactions, balances) from that company.</span></li>
-      <li><span class="k">Stores</span><span class="v">Data the owner chooses to retain, on the owner's own systems.</span></li>
-      <li><span class="k">Shares</span><span class="v">Nothing. No data is sold, rented, or disclosed to third parties.</span></li>
-      <li><span class="k">Users</span><span class="v">One — the owner. No accounts are created for anyone else.</span></li>
-    </ul>
-  </section>
+</section>
+<section class="section" id="access"><h2>Separate permissions for private records</h2>
 
-  <section>
-    <h2>Access &amp; control</h2>
-    <p>The connection to QuickBooks Online is established by the owner and can be revoked at any time, either from within Intuit's account settings or through the <a href="disconnect.html">disconnect</a> page. Revoking ends Beacon's access immediately.</p>
-    <p class="note"><strong>Scope of use.</strong> Because Beacon is a private instance with a single operator, its terms and privacy practices describe one person's handling of their own data. Read the <a href="eula.html">Terms of Use</a> and <a href="privacy.html">Privacy Policy</a> for the full statement.</p>
-  </section>
+<p>Public policy pages are available for transparency. Private trust records and administrative functions are not publicly accessible through these pages. A messaging subscription does not grant access to another person's information.</p>
+<p>Any operator-authorized accounting connection, including QuickBooks Online, is separate from the messaging program. It requires the account holder's authorization and appropriate access permissions. Verify important outputs and use a secure channel for confidential records.</p>
+
+</section>
+<section class="section" id="contact"><h2>Contact and support</h2>
+
+<p>Contact Aaron Jones at <a href="mailto:idealimagellc@gmail.com">idealimagellc@gmail.com</a> for administrative questions, access inquiries, privacy requests, or an alternative to SMS. Do not email or text passwords, account credentials, or confidential documents without first arranging an appropriate secure method.</p>
+<p class="small">This service is not monitored as an emergency channel. AI-generated replies are informational and do not independently authorize trust actions.</p>
+
+</section>
 </main>
-
-<footer>
-  <div class="foot-links">
-    <a href="eula.html">Terms&nbsp;of&nbsp;Use</a>
-    <a href="privacy.html">Privacy&nbsp;Policy</a>
-    <a href="connect.html">Connect</a>
-    <a href="disconnect.html">Disconnect</a>
-    <a href="mailto:idealimagellc@gmail.com">Contact</a>
-  </div>
-  <p class="foot-meta">Beacon · private instance · operated by Aaron Jones · Last updated 14 June 2026</p>
-</footer>
+<aside class="toc" aria-label="On this page"><h2>On this page</h2><ol><li><a href="#about">Private administration. Clear communication.</a></li><li><a href="#messaging">The Beacon messaging program</a></li><li><a href="#access">Separate permissions for private records</a></li><li><a href="#contact">Contact and support</a></li></ol></aside>
 </div>
-
+</div>
+<footer>
+<div class="foot-links"><a href="index.html">Overview</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="mailto:idealimagellc@gmail.com">Contact</a></div>
+<p>Beacon · Private trust administration and messaging</p>
+<p>Support and privacy inquiries: <a href="mailto:idealimagellc@gmail.com">idealimagellc@gmail.com</a></p>
+</footer>
 </body>
 </html>
