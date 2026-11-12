@@ -18,7 +18,7 @@ Carrier notice:
 Carriers are not liable for delayed or undelivered messages.
 1. Service and operator
 These Terms & Conditions govern Beacon's public information pages, private administrative assistant, and SMS/MMS messaging program. Beacon is operated by
-[LEGAL OPERATOR NAME]
+Aaron Jones
 ("we," "us," or "our"). Aaron Jones is the administrative contact.
 Beacon helps authorized participants communicate about trust administration. Access to internal records or connected systems is separately controlled. Reading these pages or receiving a message does not establish a right to access trust assets, beneficiary information, or another person's records.
 By affirmatively agreeing to these terms when offered as part of enrollment or authorized access, you agree to follow them. Acceptance of these terms alone is not consent to receive recurring text messages; SMS enrollment requires a separate affirmative choice.
@@ -74,7 +74,7 @@ We may update these terms and the date shown on this page. When a change require
 Program:
 Beacon
 Operator:
-[LEGAL OPERATOR NAME]
+Aaron Jones
 Administrative contact:
 Aaron Jones
 Support and privacy:

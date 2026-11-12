@@ -16,7 +16,7 @@ idealimagellc@gmail.com
 .
 1. Operator and scope
 Beacon is a private, AI-assisted administrative and messaging service operated by
-[LEGAL OPERATOR NAME]
+Aaron Jones
 ("we," "us," or "our") for trust-related coordination. Our administrative contact is Aaron Jones.
 This Privacy Policy applies to people who visit Beacon's public information pages, communicate with Beacon or its operator, or enroll in the Beacon SMS/MMS program. It also describes operator-authorized integrations. Public access to these pages does not grant access to private trust records or administrative systems.
 The messaging program supports administrative questions, scheduling, appointment confirmations, requested reminders, document-coordination notices, and updates about requests you have made. It is not an advertising, fundraising, or investment-solicitation program.
@@ -85,7 +85,7 @@ if you believe a child has submitted information so we can investigate and take 
 12. Updates and contact
 We may revise this policy to reflect changes to Beacon or its practices and will update the date above. We will provide additional notice or obtain additional consent when required. A policy update does not automatically expand an existing SMS opt-in to a new sender or message purpose.
 Operator:
-[LEGAL OPERATOR NAME]
+Aaron Jones
 Administrative contact:
 Aaron Jones
 Email:
