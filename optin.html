@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Administrative conversations and requested updates, with clear choices about your messages and data.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="color-scheme" content="dark light">
+<title>Beacon — How to opt in to texts and calls</title>
+<style>
+:root{color-scheme:dark;--bg:#0b0e14;--panel:#131923;--panel2:#10151e;--ink:#e6e9ef;--muted:#a5afc0;--line:#293243;--signal:#f2b441;--link:#f6c96b;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:17px;line-height:1.7}
+a{color:var(--link);text-underline-offset:4px;overflow-wrap:anywhere}a:hover{text-decoration-thickness:2px}a:focus-visible{outline:3px solid var(--signal);outline-offset:5px;border-radius:3px}
+.skip{position:absolute;top:-100px;left:20px;padding:12px 18px;background:var(--signal);color:var(--bg);z-index:10}.skip:focus{top:12px}
+header{border-bottom:1px solid var(--line);background:var(--panel2)}.header-inner{max-width:var(--max);margin:auto;padding:22px 28px;display:flex;align-items:center;gap:16px;justify-content:space-between;flex-wrap:wrap}
+.brand{display:flex;gap:12px;align-items:center;color:var(--ink);text-decoration:none;font-size:23px;font-weight:700;letter-spacing:-.5px}.beacon{display:inline-block;position:relative;width:24px;height:24px;border:1px solid var(--signal);border-radius:50%;flex:none}.beacon:after{content:"";position:absolute;inset:7px;background:var(--signal);border-radius:50%}
+.top-nav{display:flex;gap:22px;flex-wrap:wrap;font-size:14px}.top-nav a{text-decoration:none;color:var(--muted)}.top-nav a[]{color:var(--signal)}
+.shell{max-width:var(--max);margin:auto;padding:42px 28px 26px}.draft-note{padding:13px 17px;border:1px solid #856527;background:#251e11;border-radius:8px;margin:0 0 30px;font-size:14px;color:#f4d592}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 210px;gap:58px;align-items:start}.article{min-width:0}.eyebrow{color:var(--signal);font-size:12px;font-weight:650;letter-spacing:1.7px;text-transform:uppercase;margin:0 0 9px}
+h1{font-size:clamp(35px,5vw,52px);line-height:1.12;letter-spacing:-1.8px;margin:0 0 18px;font-weight:700}h2{font-size:23px;line-height:1.3;letter-spacing:-.45px;margin:0 0 14px}h3{font-size:17px;line-height:1.45;margin:24px 0 9px}
+p{margin:0 0 17px}.lede{font-size:19px;color:var(--muted);line-height:1.65;margin-bottom:24px}.meta{font-size:13px;color:var(--muted);margin-bottom:25px}.section{border-top:1px solid var(--line);padding-top:28px;margin-top:32px}.section>p:last-child{margin-bottom:0}
+.summary{padding:20px 22px;border:1px solid var(--line);border-radius:12px;background:var(--panel);margin:24px 0 28px}.summary h2{font-size:17px;margin-bottom:12px}.summary p{margin-bottom:10px;font-size:15px}.summary p:last-child{margin-bottom:0}.summary strong{color:var(--ink)}
+.notice{padding:20px 22px;border-left:3px solid var(--signal);border-radius:0 8px 8px 0;background:var(--panel2);margin:22px 0}.notice p:last-child{margin-bottom:0}
+.required-detail{background:#3a2a0f;color:#ffe0a1;border:1px dashed var(--signal);padding:1px 6px;box-decoration-break:clone;-webkit-box-decoration-break:clone;overflow-wrap:anywhere}
+.toc{position:sticky;top:28px;border-left:1px solid var(--line);padding-left:22px;font-size:13px}.toc h2{font-size:11px;text-transform:uppercase;letter-spacing:1.4px;color:var(--muted);margin-bottom:16px}.toc ol{list-style:none;padding:0;margin:0}.toc li{margin:0 0 12px}.toc a{text-decoration:none;color:var(--muted)}.toc a:hover{color:var(--signal)}
+dl{margin:18px 0}dt{font-weight:650;color:var(--ink);margin-top:18px}dd{margin:4px 0 0;color:var(--muted)}ul{padding-left:23px;margin:14px 0 18px}li{padding-left:2px;margin-bottom:9px}.small{font-size:14px;color:var(--muted)}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;font-size:12px;padding:3px 11px;color:var(--muted);margin-right:6px;margin-bottom:8px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}.button{padding:10px 16px;border:1px solid var(--line);background:var(--panel);border-radius:7px;text-decoration:none;font-size:15px}.button.primary{background:var(--signal);border-color:var(--signal);color:#151009;font-weight:650}
+footer{border-top:1px solid var(--line);max-width:var(--max);margin:35px auto 0;padding:26px 28px 38px;font-size:13px;color:var(--muted)}.foot-links{display:flex;flex-wrap:wrap;gap:20px;margin-bottom:13px}footer p{margin-bottom:6px}.foot-links a{color:var(--muted)}
+@media(max-width:860px){.layout{grid-template-columns:minmax(0,1fr);gap:28px}.toc{display:none;position:static;grid-row:1;border:1px solid var(--line);padding:15px 17px;border-radius:8px}.toc h2{margin-bottom:10px}.toc ol{display:flex;gap:7px 17px;flex-wrap:wrap}.toc li{margin:0}.shell{padding-top:26px}.draft-note{margin-bottom:20px}}
+@media(max-width:480px){body{font-size:16px}.header-inner,.shell{padding-left:20px;padding-right:20px}.header-inner{gap:15px}.top-nav{gap:18px}.lede{font-size:18px}.summary,.notice{padding:17px}.toc{font-size:12px}h2{font-size:21px}.section{padding-top:23px;margin-top:27px}footer{padding-left:20px;padding-right:20px}h1{letter-spacing:-1.1px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{:root{color-scheme:light;--bg:#fff;--ink:#111;--muted:#444;--line:#bbb;--panel:#f5f5f5;--panel2:#f8f8f8;--signal:#6e4800;--link:#111}body{font-size:11pt}.top-nav,.toc,.skip{display:none}.layout{display:block}.header-inner,.shell,footer{max-width:none;padding-left:0;padding-right:0}.shell{padding-top:20px}h1{font-size:30pt}h2{break-after:avoid}p{orphans:3;widows:3}.summary,.notice{break-inside:avoid}footer{margin-top:20px}.required-detail{color:#111;background:#eee}.draft-note{color:#111;background:#eee}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="header-inner"><a class="brand" href="index.html"><span class="beacon" aria-hidden="true"></span>Beacon</a><nav class="top-nav" aria-label="Main navigation"><a href="index.html" >Overview</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="optin.html" aria-current="page">Text START</a></nav></div></header>
+<div class="shell">
+<div class="layout">
+<main class="article" id="main">
+<p class="eyebrow">Beacon / Messaging opt-in</p>
+<h1>Text START to (254) 505-3742</h1>
+<p class="lede">How to opt in to Beacon administrative texts and calls from Aaron Jones.</p>
+<p class="meta">Last updated: <time datetime="2026-11-11">November 11, 2026</time></p>
+<section class="section" id="how"><h2>How to opt in</h2>
+<p>Beacon is a private, non-promotional administrative assistant operated by Aaron Jones. It is offered only to family members and advisers Aaron knows personally.</p>
+<div class="notice"><p><strong>To opt in, text START to (254) 505-3742.</strong></p>
+<p>By texting START, you agree to receive recurring administrative text messages and phone calls, including calls that use an AI-generated voice, from Beacon (Aaron Jones) at the number you texted from. Messages cover answers to your questions, meeting and appointment confirmations, reminders you request, document-coordination notices, and status updates on your requests. Message frequency varies. Message and data rates may apply. Reply HELP for help. Reply STOP at any time to opt out of texts; you can also ask to stop calls at any time.</p></div>
+<p>After you text START, Beacon replies: &ldquo;Beacon (Aaron Jones): You are subscribed to Beacon administrative texts and calls. Msg frequency varies. Msg &amp; data rates may apply. Reply HELP for help, STOP to opt out. Terms: https://amj9r3.github.io/Beacon/terms.html&rdquo;</p>
+<p>Beacon does not text or call a number that has not opted in, and it does not add anyone to a group conversation without that person&rsquo;s own opt-in.</p>
+</section>
+<section class="section" id="choices"><h2>Your choices</h2>
+<p>Opting in is voluntary and is not a condition of purchasing anything. Reply STOP to cancel; you will receive one confirmation and no further messages. Reply START to resubscribe. For help, reply HELP or email <a href="mailto:idealimagellc@gmail.com">idealimagellc@gmail.com</a>.</p>
+<p>We do not sell or share mobile numbers or messaging consent with third parties or affiliates for marketing or promotional purposes. See the <a href="terms.html">Terms &amp; Conditions</a> and <a href="privacy.html">Privacy Policy</a>.</p>
+</section>
+</main>
+
+</div>
+</div>
+<footer>
+<div class="foot-links"><a href="index.html">Overview</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="optin.html">How to opt in</a><a href="mailto:idealimagellc@gmail.com">Contact</a></div>
+<p>Beacon · Private trust administration and messaging</p>
+<p>Support and privacy inquiries: <a href="mailto:idealimagellc@gmail.com">idealimagellc@gmail.com</a></p>
+</footer>
+</body>
+</html>
